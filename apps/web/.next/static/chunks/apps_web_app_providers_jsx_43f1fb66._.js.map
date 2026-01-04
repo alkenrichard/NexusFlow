@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Full%20Stack/NexusFlow/apps/web/app/providers.jsx"],"sourcesContent":["\"use client\";\n\nimport { HeroUIProvider } from \"@heroui/system\";\nimport { useRouter } from \"next/navigation\";\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\";\n\nexport function Providers({ children, themeProps }) {\n  const router = useRouter();\n\n  return (\n    <HeroUIProvider navigate={router.push}>\n      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>\n    </HeroUIProvider>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AACA;AACA;;;AAJA;;;;AAMO,SAAS,UAAU,KAAwB;QAAxB,EAAE,QAAQ,EAAE,UAAU,EAAE,GAAxB;;IACxB,MAAM,SAAS,IAAA,kJAAS;IAExB,qBACE,6LAAC,qLAAc;QAAC,UAAU,OAAO,IAAI;kBACnC,cAAA,6LAAC,oKAAkB;YAAE,GAAG,UAAU;sBAAG;;;;;;;;;;;AAG3C;GARgB;;QACC,kJAAS;;;KADV","debugId":null}}]
+}

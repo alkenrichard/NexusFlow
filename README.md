@@ -62,7 +62,7 @@ It helps individuals and small teams manage tasks, collaborate efficiently, and 
 - React.js
 - TypeScript
 - Tailwind CSS
-- Zustand / Redux Toolkit
+- Zustand Toolkit
 - TanStack Query (React Query)
 
 ### Backend
@@ -78,15 +78,6 @@ It helps individuals and small teams manage tasks, collaborate efficiently, and 
 - MongoDB
 - Mongoose ODM
 - Indexed queries for analytics performance
-
-### Infrastructure & DevOps
-
-- Docker
-- GitHub Actions (CI/CD)
-- Deployment:
-  - Frontend: Vercel
-  - Backend: Railway / Render
-  - Database: MongoDB Atlas
 
 ---
 
