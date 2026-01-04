@@ -1,21 +1,17 @@
-export function middleware(req) {
-  const role = req.cookies.get("role")?.value;
+import { NextResponse } from "next/server";
 
-  if (!role) {
-    return NextResponse.redirect(new URL("/login", req.url));
-  }
+export function middleware(request) {
+  const { pathname } = request.nextUrl;
 
-  const pathname = req.nextUrl.pathname;
-
-  if (pathname.startsWith("/admin")) {
-    if (!hasPermission(role, "user:delete")) {
-      return NextResponse.redirect(new URL("/403", req.url));
-    }
+  if (pathname === "/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/dashboard";
+    return NextResponse.rewrite(url);
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/", "/dashboard"],
 };

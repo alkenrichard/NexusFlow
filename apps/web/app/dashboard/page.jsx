@@ -2,10 +2,13 @@ import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 
 import { title, subtitle } from "@/components/primitives";
+import PieChart from "./components/pieChart";
 
-export default function Home() {
+export default function Dashboard() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section>
+      <PieChart />
+
       <div className="inline-block max-w-xl text-center justify-center">
         <span className={title()}>Make&nbsp;</span>
         <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
@@ -13,9 +16,6 @@ export default function Home() {
         <span className={title()}>
           websites regardless of your design experience.
         </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
       </div>
 
       <div className="mt-8">
